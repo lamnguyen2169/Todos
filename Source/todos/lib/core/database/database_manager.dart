@@ -1,8 +1,8 @@
-///
+/// https://sqlite.org/wal.html
 
 import 'dart:io';
 
-import 'package:sqflite/sqflite.dart';
+import 'package:sqflite_sqlcipher/sqflite.dart';
 import 'package:path/path.dart';
 import 'package:path_provider/path_provider.dart';
 
@@ -84,6 +84,7 @@ class DatabaseManager {
       },
       version: databaseVersion,
     );
+    _database.rawQuery('PRAGMA journal_mode=WAL;');
 
     return _database;
   }
