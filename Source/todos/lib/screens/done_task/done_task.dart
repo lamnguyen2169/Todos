@@ -39,7 +39,7 @@ class _DoneTaskScreenState extends LifecycleState<DoneTaskScreen> {
       bottom: false,
       right: false,
       title: BarTitle(
-        title: 'Công việc đã hoàn thành',
+        title: 'Finished Tasks',
         fontSize: 26,
         titleAlignment: TextAlign.left,
       ),

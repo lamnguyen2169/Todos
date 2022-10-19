@@ -31,11 +31,16 @@ class TaskCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final TaskCardController controller = Provider.of<TaskCardController>(context);
 
-    return StreamProvider<Task>.value(
+    return StreamProvider<Task?>.value(
       value: controller.taskStream,
-      initialData: controller.task,
-      child: Consumer<Task>(
+      initialData: null,
+      updateShouldNotify: (previous, current) => true,
+      child: Consumer<Task?>(
         builder: (context, task, child) {
+          if (task is! Task) {
+            return Container();
+          }
+
           return GestureDetector(
             onTap: this.onPressed,
             child: Column(

@@ -74,7 +74,7 @@ class ContainerWidget extends StatelessWidget {
         context,
         Dialogs.messageWidget(
           context,
-          'Không thể tạo công việc',
+          'Cannot create task',
         ),
       );
     }
@@ -145,7 +145,7 @@ class _InputWidgetState extends State<InputWidget> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Text(
-            'Nhập công việc bạn muốn làm',
+            'Task you wanna do',
             textAlign: TextAlign.left,
             style: TextStyle(
               color: AppColors.text,
@@ -163,7 +163,7 @@ class _InputWidgetState extends State<InputWidget> {
             autofocus: true,
             color: AppColors.text,
             cursorColor: AppColors.text,
-            placeholder: 'Nhập công việc',
+            placeholder: 'Input task name',
             placeholderColor: AppColors.greyText,
             fontSize: 16,
             fontWeight: FontWeight.normal,
@@ -180,7 +180,7 @@ class _InputWidgetState extends State<InputWidget> {
             height: 27,
           ),
           Text(
-            'Ngày dự định hoàn thành công việc',
+            'Completion date',
             textAlign: TextAlign.left,
             style: TextStyle(
               color: AppColors.text,
@@ -268,7 +268,7 @@ class _BottomWidgetState extends State<BottomWidget> {
         child: Consumer<bool>(
           builder: (context, isEnabled, child) {
             return Button(
-              title: 'Tạo',
+              title: 'Create',
               fontSize: 14,
               fontWeight: FontWeight.bold,
               color: AppColors.white,

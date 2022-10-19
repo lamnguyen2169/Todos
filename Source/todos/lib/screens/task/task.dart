@@ -39,7 +39,7 @@ class _TaskScreenState extends LifecycleState<TaskScreen> {
       bottom: false,
       right: false,
       title: BarTitle(
-        title: 'Công việc của tôi',
+        title: 'My Tasks',
         fontSize: 26,
         titleAlignment: TextAlign.left,
       ),

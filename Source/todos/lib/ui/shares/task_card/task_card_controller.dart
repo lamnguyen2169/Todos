@@ -12,19 +12,17 @@ import 'task_card_event.dart';
 
 class TaskCardController extends BaseController {
   /// MARK: - Local properties
-  final BehaviorSubject<Task> _taskSubject = BehaviorSubject<Task>();
+  final BehaviorSubject<Task?> _taskSubject = BehaviorSubject<Task?>();
 
   /// MARK: - Public properties
-  late Task task;
+  ValueStream<Task?> get taskStream => _taskSubject.stream;
 
-  ValueStream<Task> get taskStream => _taskSubject.stream;
-
-  RxSink<Task> get taskSink => RxSink(_taskSubject);
+  RxSink<Task?> get taskSink => RxSink(_taskSubject);
 
   /// MARK: - Constructors
   TaskCardController(Task task, [BaseController? parent]) : super(parent) {
     if (task is Task) {
-      this.task = task;
+      this.taskSink.add(task);
     }
   }
 

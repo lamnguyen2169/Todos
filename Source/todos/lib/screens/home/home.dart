@@ -46,7 +46,7 @@ class _HomeScreenState extends LifecycleState<HomeScreen> {
       bottom: false,
       right: false,
       title: BarTitle(
-        title: 'Danh sách công việc',
+        title: 'Task List',
         fontSize: 26,
         titleAlignment: TextAlign.left,
       ),
